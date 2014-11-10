@@ -10,6 +10,7 @@
 		5DB7C7F41A114C030073184B /* Glue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB7C7E81A114C020073184B /* Glue.framework */; };
 		5DB7C80A1A114C490073184B /* Glue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C8051A114C490073184B /* Glue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DB7C80E1A114C500073184B /* GlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C8081A114C490073184B /* GlueTests.swift */; };
+		5DB7C8151A114DBA0073184B /* GlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C8141A114DBA0073184B /* GlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		5DB7C8061A114C490073184B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DB7C8081A114C490073184B /* GlueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlueTests.swift; sourceTree = "<group>"; };
 		5DB7C8091A114C490073184B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB7C8141A114DBA0073184B /* GlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB7C8051A114C490073184B /* Glue.h */,
+				5DB7C8141A114DBA0073184B /* GlueViewController.swift */,
 				5DB7C80F1A114C5A0073184B /* Supporting Files */,
 			);
 			path = Source;
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB7C8151A114DBA0073184B /* GlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 		5DB7C7FF1A114C030073184B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5DB7C8001A114C030073184B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
