@@ -7,6 +7,15 @@ Glue
 
 Seamlessly glue multiple storyboards together without writing a single line of code.
 
+<p align="center">
+  <a href="http://youtu.be/lQzjHntOKZg"><img src="http://share.gifyoutube.com/Kz77qb.gif" alt="Glue Demo"/></a>
+</p>
+
+Facts:
+- 3 Storyboards
+- 16 View controllers (tab bar controller, container view controllers, etc.)
+- 0 lines of code
+
 ## Features
 
 - [x] Works with `UITabBarController` (replaces the tab).
