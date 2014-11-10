@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="32a-GA-7Tb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="OMk-af-qBX">
+            <objects>
+                <viewController id="rRt-sP-nKl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZEJ-Zs-Rgq"/>
+                        <viewControllerLayoutGuide type="bottom" id="cSm-KB-tlv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rxn-Rz-h2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-wr-WVA">
+                                <rect key="frame" x="16" y="72" width="568" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TiB-Zy-aPA"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="uTa-G2-8ho" kind="embed" id="Ks5-3z-i7f"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T24-Cb-LqA">
+                                <rect key="frame" x="16" y="180" width="568" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="QnA-68-6Mc"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Dtj-zD-nWt" kind="embed" id="0p4-Kr-N94"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-E2-mCM">
+                                <rect key="frame" x="16" y="288" width="568" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Db-ft-1eh"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="6Bw-ld-ge5" kind="embed" id="p0O-VR-AtY"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T24-Cb-LqA" firstAttribute="top" secondItem="AM9-wr-WVA" secondAttribute="bottom" constant="8" id="4H4-Vg-d7h"/>
+                            <constraint firstItem="d7T-E2-mCM" firstAttribute="leading" secondItem="rxn-Rz-h2Y" secondAttribute="leadingMargin" id="6H1-E0-DhR"/>
+                            <constraint firstItem="d7T-E2-mCM" firstAttribute="trailing" secondItem="rxn-Rz-h2Y" secondAttribute="trailingMargin" id="Cts-Mf-RJQ"/>
+                            <constraint firstItem="AM9-wr-WVA" firstAttribute="trailing" secondItem="rxn-Rz-h2Y" secondAttribute="trailingMargin" id="HxJ-Ia-ew7"/>
+                            <constraint firstItem="AM9-wr-WVA" firstAttribute="leading" secondItem="rxn-Rz-h2Y" secondAttribute="leadingMargin" id="OSf-cr-W2c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T24-Cb-LqA" secondAttribute="trailing" id="ZFT-s1-QFj"/>
+                            <constraint firstItem="AM9-wr-WVA" firstAttribute="top" secondItem="ZEJ-Zs-Rgq" secondAttribute="bottom" constant="8" id="c4S-Cp-ed5"/>
+                            <constraint firstItem="d7T-E2-mCM" firstAttribute="top" secondItem="T24-Cb-LqA" secondAttribute="bottom" constant="8" id="our-t2-DbY"/>
+                            <constraint firstItem="T24-Cb-LqA" firstAttribute="leading" secondItem="rxn-Rz-h2Y" secondAttribute="leadingMargin" id="t0I-QJ-sEz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="VOZ-xQ-OCH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpy-P8-B7n" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="352"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IFo-Nw-Vou">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="32a-GA-7Tb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="y1U-R5-hO7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3UX-Su-33S" kind="relationship" relationship="viewControllers" id="cdb-8d-GK7"/>
+                        <segue destination="D8a-Y6-hvP" kind="relationship" relationship="viewControllers" id="OyK-Cf-Haa"/>
+                        <segue destination="89o-1e-F0f" kind="relationship" relationship="viewControllers" id="RAt-JK-ucT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uK5-2a-EZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4BN-TQ-iqa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3UX-Su-33S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="qkh-Ss-mDY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Sp-qk-0Zp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rRt-sP-nKl" kind="relationship" relationship="rootViewController" id="UVI-nD-mvX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="md4-e2-57f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="352"/>
+        </scene>
+        <!--Glued with Featured-->
+        <scene sceneID="8g5-5z-yf6">
+            <objects>
+                <viewController title="Glued with Featured" id="D8a-Y6-hvP" customClass="GlueViewController" customModule="Glue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jDA-HH-3Ty"/>
+                        <viewControllerLayoutGuide type="bottom" id="TVd-KK-u1v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NMj-G3-dkU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="3CU-Fq-GU2"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Featured"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJk-sn-A8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="1086"/>
+        </scene>
+        <!--Glued with Infinity-->
+        <scene sceneID="PmZ-Ov-4o2">
+            <objects>
+                <viewController title="Glued with Infinity" id="89o-1e-F0f" customClass="GlueViewController" customModule="Glue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bwn-Ti-Zr0"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAS-mc-cJZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="boa-94-kOc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" badgeValue="∞" systemItem="history" id="VdO-nx-njx"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Infinity"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0g-75-V9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="1762"/>
+        </scene>
+        <!--Glued with Blue-->
+        <scene sceneID="tFh-7m-zDP">
+            <objects>
+                <viewController title="Glued with Blue" automaticallyAdjustsScrollViewInsets="NO" id="uTa-G2-8ho" customClass="GlueViewController" customModule="Glue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ztg-iH-olN"/>
+                        <viewControllerLayoutGuide type="bottom" id="yaj-QU-C9h"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VxJ-8X-FcC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Featured"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewControllerIdentifier" value="BlueViewController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsu-hE-pDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="235"/>
+        </scene>
+        <!--Glued with Red-->
+        <scene sceneID="eCv-l1-9Hb">
+            <objects>
+                <viewController title="Glued with Red" automaticallyAdjustsScrollViewInsets="NO" id="Dtj-zD-nWt" customClass="GlueViewController" customModule="Glue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aja-oj-msQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lxs-N8-WXs"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HqX-qb-k0p">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Featured"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewControllerIdentifier" value="RedViewController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfg-Ue-fFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="430"/>
+        </scene>
+        <!--Glued with Infinity-->
+        <scene sceneID="RML-eZ-r0I">
+            <objects>
+                <viewController title="Glued with Infinity" automaticallyAdjustsScrollViewInsets="NO" id="6Bw-ld-ge5" customClass="GlueViewController" customModule="Glue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U0L-Ze-jDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZt-Rs-Mwj"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N5Y-KD-30f">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Infinity"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewControllerIdentifier" value="InfinityViewController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38a-eD-Ys5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="602"/>
+        </scene>
+    </scenes>
+</document>

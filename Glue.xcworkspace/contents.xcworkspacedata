@@ -4,4 +4,7 @@
    <FileRef
       location = "container:Glue.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Example.xcodeproj">
+   </FileRef>
 </Workspace>
