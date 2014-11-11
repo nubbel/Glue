@@ -39,7 +39,7 @@ _Due to the current lack of [proper infrastructure](http://cocoapods.org) for Sw
 6. Expand the "Target Dependencies" group, and add `Glue.framework`.
 7. Click on the `+` button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add `Glue.framework`.
 
-_Alternatively_ you could also just copy the `GlueViewController.swift` file to project, it doesn't have any dependencies.
+_Alternatively_ you could also just copy the `GlueViewController.swift` file to your project, it doesn't have any dependencies.
 
 ---
 
