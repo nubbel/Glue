@@ -23,13 +23,9 @@ import UIKit
     /// This property can be set directly in the storyboard file.
     @IBInspectable public var viewControllerIdentifier: String?
     
-    lazy private var targetStoryboard: UIStoryboard? = { [unowned self] in
-        self.loadTargetStoryboard()
-    }()
+    lazy private var targetStoryboard: UIStoryboard? = self.loadTargetStoryboard()
     
-    lazy private var targetViewController: UIViewController? = { [unowned self] in
-        self.loadTargetViewController()
-    }()
+    lazy private var targetViewController: UIViewController? = self.loadTargetViewController()
     
     
     override public func viewDidLoad() {
