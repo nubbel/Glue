@@ -25,7 +25,9 @@ import UIKit
     
     lazy private var targetStoryboard: UIStoryboard? = self.loadTargetStoryboard()
     
-    lazy private var targetViewController: UIViewController? = self.loadTargetViewController()
+    /// The glued view controller. Can be used in prepareForSegue(segue:, sender:) to pass
+    /// data.
+    lazy public var targetViewController: UIViewController? = self.loadTargetViewController()
     
     
     override public func viewDidLoad() {
@@ -38,6 +40,7 @@ import UIKit
             target.didMoveToParentViewController(self)
         }
     }
+    
     
     override public func awakeFromNib() {
         super.awakeFromNib()
