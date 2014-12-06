@@ -23,21 +23,21 @@ import UIKit
     /// This property can be set directly in the storyboard file.
     @IBInspectable public var viewControllerIdentifier: String?
     
-    lazy private var targetStoryboard: UIStoryboard? = self.loadTargetStoryboard()
+    lazy private var gluedStoryboard: UIStoryboard? = self.loadGluedStoryboard()
     
     /// The glued view controller. Can be used in prepareForSegue(segue:, sender:) to pass
     /// data.
-    lazy public var targetViewController: UIViewController? = self.loadTargetViewController()
+    lazy public var gluedViewController: UIViewController? = self.loadGluedViewController()
     
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        if let target = targetViewController {
-            // add target as child view controller
-            addChildViewController(target)
-            view.addSubview(target.view)
-            target.didMoveToParentViewController(self)
+        if let glued = gluedViewController {
+            // add glued view controller as child view controller
+            addChildViewController(glued)
+            view.addSubview(glued.view)
+            glued.didMoveToParentViewController(self)
         }
     }
     
@@ -51,13 +51,13 @@ import UIKit
                 // check if we're a tab
                 let index = viewControllers.indexOfObject(self)
                 if index != NSNotFound {
-                    if let target = targetViewController {
-                        // copy tab bar item over to target
-                        target.tabBarItem = tabBarItem
+                    if let glued = gluedViewController {
+                        // copy tab bar item over to glued view controller
+                        glued.tabBarItem = tabBarItem
                         
-                        // replace this view controller with target
+                        // replace this view controller with glued controller
                         var newViewControllers = NSMutableArray(array: viewControllers)
-                        newViewControllers.replaceObjectAtIndex(index, withObject: target)
+                        newViewControllers.replaceObjectAtIndex(index, withObject: glued)
                         
                         // update tab bar
                         tab.setViewControllers(newViewControllers, animated: false)
@@ -72,7 +72,7 @@ import UIKit
 // MARK: - Private
 
 private extension GlueViewController {
-    func loadTargetStoryboard() -> UIStoryboard? {
+    func loadGluedStoryboard() -> UIStoryboard? {
         if let name = storyboardName {
             return UIStoryboard(name: name, bundle: nil)
         }
@@ -80,8 +80,8 @@ private extension GlueViewController {
         return self.storyboard
     }
     
-    func loadTargetViewController() -> UIViewController? {
-        if let storyboard = targetStoryboard {
+    func loadGluedViewController() -> UIViewController? {
+        if let storyboard = gluedStoryboard {
             if let identifier = viewControllerIdentifier {
                 return storyboard.instantiateViewControllerWithIdentifier(identifier) as? UIViewController
             }
