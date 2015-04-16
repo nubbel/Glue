@@ -56,8 +56,8 @@ import UIKit
                         glued.tabBarItem = tabBarItem
                         
                         // replace this view controller with glued controller
-                        var newViewControllers = NSMutableArray(array: viewControllers)
-                        newViewControllers.replaceObjectAtIndex(index, withObject: glued)
+                        var newViewControllers = viewControllers.mutableCopy() as! [AnyObject]
+                        newViewControllers[index] = glued
                         
                         // update tab bar
                         tab.setViewControllers(newViewControllers, animated: false)
