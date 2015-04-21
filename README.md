@@ -4,6 +4,7 @@ Glue
 [![Twitter: @KauseFx](https://img.shields.io/badge/contact-@nubbel-blue.svg?style=flat)](https://twitter.com/nubbel)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/nubbel/Glue/blob/master/LICENSE)
 [![Release](http://img.shields.io/github/release/nubbel/Glue.svg?style=flat)](https://github.com/nubbel/Glue/releases/latest)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 Seamlessly glue multiple storyboards together without writing a single line of code.
@@ -30,7 +31,58 @@ Facts:
 
 ## Installation
 
-_Due to the current lack of [proper infrastructure](http://cocoapods.org) for Swift dependency management, using Glue in your project requires the following steps:_
+## Installation
+
+### Using a dependency manager
+
+#### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+
+CocoaPods 0.36 adds supports for Swift and embedded frameworks. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate Glue into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.1'
+use_frameworks!
+
+pod 'Glue', '~> 0.0.3'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+#### Carthage
+
+Carthage is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate Glue into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "nubbel/Glue" ~> 0.0.3
+```
+
+### Manually
+
+If you prefer not to use either of the aforementioned dependency managers, you can integrate Glue into your project manually.
+
+#### Embedded Framework
 
 1. Add Glue as a [submodule](http://git-scm.com/docs/git-submodule) by opening the Terminal, `cd`-ing into your top-level project directory, and entering the command `git submodule add https://github.com/nubbel/Glue.git`
 2. Open the `Glue` folder, and drag `Glue.xcodeproj` into the file navigator of your app project.
@@ -41,7 +93,10 @@ _Due to the current lack of [proper infrastructure](http://cocoapods.org) for Sw
 7. Expand the "Link Binary with Libraries" group, and add `Glue.framework`.
 8. Click on the `+` button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add `Glue.framework`.
 
-_Alternatively_ you could also just copy the `GlueViewController.swift` file to your project, it doesn't have any dependencies.
+
+#### Source File
+
+Copy the `GlueViewController.swift` file to your project, it doesn't have any dependencies.
 
 ---
 
