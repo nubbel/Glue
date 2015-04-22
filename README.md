@@ -4,6 +4,7 @@ Glue
 [![Twitter: @KauseFx](https://img.shields.io/badge/contact-@nubbel-blue.svg?style=flat)](https://twitter.com/nubbel)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/nubbel/Glue/blob/master/LICENSE)
 [![Release](http://img.shields.io/github/release/nubbel/Glue.svg?style=flat)](https://github.com/nubbel/Glue/releases/latest)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Glue.svg?style=flat)](http://cocoadocs.org/docsets/Glue)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
