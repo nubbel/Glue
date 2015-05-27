@@ -1,7 +1,7 @@
 Glue
 ====
 
-[![Twitter: @KauseFx](https://img.shields.io/badge/contact-@nubbel-blue.svg?style=flat)](https://twitter.com/nubbel)
+[![Twitter: @nubbel](https://img.shields.io/badge/contact-@nubbel-blue.svg?style=flat)](https://twitter.com/nubbel)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/nubbel/Glue/blob/master/LICENSE)
 [![Release](http://img.shields.io/github/release/nubbel/Glue.svg?style=flat)](https://github.com/nubbel/Glue/releases/latest)
 [![Build Status](https://img.shields.io/travis/nubbel/Glue/master.svg?style=flat)](https://travis-ci.org/nubbel/Glue)
